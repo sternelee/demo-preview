@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test File Mimetype</title>
+  </head>
+  <body>
+    <h1>
+      <input type="file" />
+    </h1>
+    <h2></h2>
+    <script>
+      const input = document.querySelector('input[type="file"]');
+      input.addEventListener("change", function (e) {
+        const file = e.target.files[0];
+        document.querySelector('h2').innerHTML = file.type;
+      });
+    </script>
+  </body>
+</html>
